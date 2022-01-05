@@ -16,6 +16,16 @@ def loading():
         sys.stdout.flush()
     print()
 
+def loadingBar():
+    """Prints a loading bar"""
+    barLen = 50
+    for i in range(barLen):
+        time.sleep(0.05)
+        sys.stdout.write(moveleft() + "[" + ''.join(["." if j <= i else " " for j in range(barLen)]) + "] " + str(i + 1) + "%")
+        sys.stdout.flush()
+    print()
+
 
 if __name__ == '__main__':
-    loading()
+    # loading()
+    loadingBar()
