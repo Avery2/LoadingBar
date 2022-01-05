@@ -8,9 +8,10 @@ def moveleft(n=1000):
 
 
 def loading():
+    """Prints a loading message"""
     print("Loading...")
     for i in range(100):
-        time.sleep(0.01)
+        time.sleep(0.05)
         sys.stdout.write(moveleft() + str(i + 1) + "%")
         sys.stdout.flush()
     print()
